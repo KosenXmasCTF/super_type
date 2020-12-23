@@ -38,7 +38,7 @@ int main() {
 		int opt = menu();
 		switch(opt) {
 			case 0: {
-				st.char_ptr = mmap(NULL, 0x1000, PROT_EXEC | PROT_WRITE | PROT_READ, MAP_SHARED, -1, 0);
+				st.char_ptr = mmap(NULL, 0x1000, PROT_EXEC | PROT_WRITE | PROT_READ, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
 				break;
 			}
 			case 1: {
